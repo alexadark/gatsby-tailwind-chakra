@@ -2,6 +2,7 @@ const colors = require("./themeConfig/colors")
 
 module.exports = {
   purge: [],
+  darkMode: "class",
 
   theme: {
     // screens: {

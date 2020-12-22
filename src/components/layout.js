@@ -1,18 +1,17 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import React from "react"
+import React, { useEffect, useState } from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import ls from "local-storage"
 
 import Header from "./header"
 import "./layout.css"
 
 const Layout = ({ children }) => {
+  const [colorMode, setColorMode] = useState(ls("chakra-ui-color-mode"))
+
+  useEffect(() => {
+    setColorMode(ls("chakra-ui-color-mode"))
+  })
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,7 +23,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div className={colorMode}>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
@@ -34,15 +33,17 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
+        <footer
+          style={{
+            marginTop: `2rem`,
+          }}
+        >
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 

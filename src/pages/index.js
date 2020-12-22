@@ -4,13 +4,13 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { Box } from "@chakra-ui/react"
+import { Box, useColorModeValue as colorMode } from "@chakra-ui/react"
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
-    <Box className="bg-secondary" p={10}>
-      <h1 className="py-4 text-center text-primary bg-test rounded-4">
+    <Box className="" bg={colorMode("searchBg", "modes.dark.headerBg")} p={10}>
+      <h1 className="py-4 text-center dark:text-modes-dark-searchResultsHeaderBg text-fuchsia-600 bg-test rounded-4">
         Hi people
       </h1>
     </Box>
