@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <Box className="" bg={colorMode("searchBg", "modes.dark.headerBg")} p={10}>
-      <h1 className="py-4 text-center dark:text-modes-dark-searchResultsHeaderBg text-fuchsia-600 bg-test rounded-4">
+      <h1 className="py-12 text-center uppercase dark:text-modes-dark-searchResultsHeaderBg text-fuchsia-600 bg-test rounded-4">
         Hi people
       </h1>
     </Box>

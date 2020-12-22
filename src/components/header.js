@@ -2,14 +2,10 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import { ColorSwitch } from "./ColorSwitch"
+import { useColorModeValue as colorMode, chakra } from "@chakra-ui/react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <chakra.header className="mb-6 bg-secondary dark:bg-pink-400">
     <div
       style={{
         margin: `0 auto`,
@@ -30,7 +26,7 @@ const Header = ({ siteTitle }) => (
       </h1>
       <ColorSwitch />
     </div>
-  </header>
+  </chakra.header>
 )
 
 Header.propTypes = {

@@ -1,19 +1,17 @@
-const colors = require("./themeConfig/colors")
+const config = require("./themeConfig")
 
 module.exports = {
   purge: [],
   darkMode: "class",
 
   theme: {
-    // screens: {
-    //   ...breakpoints,
-    // },
-    colors: {
-      ...colors,
+    ...config,
 
-      test: "#345679",
+    extend: {
+      colors: {
+        test: "#345679",
+      },
     },
-    extend: {},
   },
   variants: {
     extend: {},
