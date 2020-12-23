@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import Image from "../components/image"
 import SEO from "../components/seo"
-import { Box, useColorModeValue as colorMode } from "@chakra-ui/react"
+import { Box, useColorModeValue as colorMode, chakra } from "@chakra-ui/react"
 
 const IndexPage = () => (
   <Layout>
@@ -14,7 +14,7 @@ const IndexPage = () => (
         Hi people
       </h1>
     </Box>
-    <p>Welcome to your new Gatsby site.</p>
+    <chakra.p fontSize="4xl">Welcome to your new Gatsby site.</chakra.p>
     <p>Now go build something great.</p>
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Image />
