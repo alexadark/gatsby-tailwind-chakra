@@ -5,14 +5,8 @@ import { ColorSwitch } from "./ColorSwitch"
 import { useColorModeValue as colorMode, chakra } from "@chakra-ui/react"
 
 const Header = ({ siteTitle }) => (
-  <chakra.header className="mb-6 bg-secondary dark:bg-pink-400">
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
+  <header className="dark:bg-pink-400 mb-6 bg-secondary py-5 px-5">
+    <div>
       <h1 className="m-0 text-2xl">
         <Link
           to="/"
@@ -26,7 +20,7 @@ const Header = ({ siteTitle }) => (
       </h1>
       <ColorSwitch />
     </div>
-  </chakra.header>
+  </header>
 )
 
 Header.propTypes = {
